@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-desktop-height: 69px;
+    --header-mobile-height: 80px;
+}
+
+html{ 
+    font-family: 'Roboto', Aria, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html body{
+    overflow-x: hidden;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.line-through{
+    text-decoration: line-through;
+    opacity: 0.05;
+    transition: opacity 2s ease-in 250ms;
+}
+
+.line-through:hover{
+    opacity: 1;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.h3-margin{
+    margin: 16px 0;
+}
+
+.button{
+    display: inline-block;
+    padding: 10px 32px; 
+}
+/* start header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    background-color: #000;
+    color: azure;
+    height: var(--header-desktop-height);
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navigation {
+    list-style: none;
+    height: var(--header-desktop-height);
+}
+
+.navigation > li{
+    height: var(--header-desktop-height);
+    padding: 0 5px;
+    display: inline-block;
+    
+}
+
+.navigation > li > a{
+    color: azure;
+    cursor: pointer;
+    line-height: var(--header-desktop-height);
+}
+
+.navigation > li:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px), (orientation: potrait) {
+    .navigation{
+        display: none;
+    }
+
+    header {
+        height: var(--header-mobile-height);
+    }
+}
+
+.title{
+    padding-left: 1%;
+    /* text-align: center; */
+}
+/* end header */
+/* Start main */
+main {
+    padding-top: var(--header-desktop-height);
+}
+/* Start mission section */
+.mission{
+    background-color: rgb(255, 255, 255);
+    line-height: 1.4;
+}
+/* Start mission article */
+.mission article img {
+    min-height: 25px;
+    max-height: 50px;
+    width: auto;
+}
+
+.mission article{
+    padding: 50px 25%;
+    text-align: center;
+}
+
+.umbrella{
+    display: flex;
+    min-height: 30px;
+    max-height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.umbrella-label {
+   color: rgb(61, 61, 61, 0.6);
+}
+
+@media only screen and (max-width: 768px), (orientation: potrait) {
+    .mission article{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+/* End mission article*/
+/* Start successful mission */
+.some-successful-mission{
+    background-color: #333;
+    color: azure;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.some-successful-mission h1{
+    padding-top: 32px;
+}
+
+.achievement-shell{
+    display: flex;
+    justify-content: center;
+}
+
+.achievements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    width: 1400px;
+    margin-top: 68px;
+}
+
+.row-1{
+    flex: 33.33%;
+    height: auto;
+    padding: 0 50px;
+}
+
+.row-2{
+    flex: 50%;
+    height: auto;
+    padding: 0 100px;;
+}
+
+.success-mission{
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+.success-mission img{
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media only screen and (max-width: 1210px), (orientation: potrait) {
+    .success-mission{
+       flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .success-mission{
+        flex: 100%;
+        padding: 20px;
+    }
+}
+/* End successful mission */
+/* Start employee */
+.employees{
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.hitman-shell{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.employees h1.uppercase{
+    padding: 32px 0;
+}
+
+.hitmans{
+    flex: 33.33%;
+
+}
+
+.hitman-img{
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.available{
+    background-color: rgb(255, 0, 0);
+    color: #fff; 
+    box-shadow: 10px 12px rgba(227, 227, 227, 0.6);
+    transition-property: color, background-color, box-shadows;
+    transition: all 2s ease 250ms;
+}   
+
+.unavailable{
+    background-color: #000;
+    color: #fff;
+}
+
+.available:hover{
+    color: #000;
+    background-color: rgba(227, 227, 227, 0.6);
+    box-shadow: 10px 12px rgb(255, 0, 0);
+}
+
+.available:active{
+    background-color: rgb(255, 0, 0);
+    color: #fff; 
+    margin-left: 16px;
+    margin-top: 26px; 
+    transition: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .hitmans{
+        margin-top: 32px;
+    }
+}
+
+/* End employees section */
+
+/* Start mix section */
+.mix{
+    display: flex;
+}
+
+.Ukraine{
+    flex: 50%;
+}
+
+.recruit{
+    flex: 50%;
+}
+
+footer {
+    color: rgb(255, 255, 255, 0.5);
+    background-color: #000;
+    padding: 24px 0 24px 10px;
+}
